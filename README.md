@@ -1,5 +1,7 @@
 # 8-Week Robotics Curriculum (16 Sessions)
 
+![Robot car built](images/robot.jpeg)
+
 ## Week 1: Assembly & Orientation
 
 * **Day 1:** Build the chassis. Identify each part and what it does.
