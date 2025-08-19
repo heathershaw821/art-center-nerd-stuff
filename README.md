@@ -7,12 +7,18 @@
 * **Day 1:** Build the chassis. Identify each part and what it does.
 * **Day 2:** Power test. Upload a “blink” to confirm wiring works.
 
+
+
 ---
 
 ## Week 2: Arduino Fundamentals
 
 * **Day 1 (Code):** Serial basics: `Serial.print()`, Hello World, debugging. Digital output with LED blink patterns.
-* **Day 2 (Robot):** Test LEDs & wiring on the robot. Write a simple LED “heartbeat” on the board.
+* **Day 2 (Robot):** Video presentation + lecture on robotics funamentals
+[An Introduction To Robotics 🤖 By Teach Kids Robotics](https://www.youtube.com/watch?v=HvMQONnCXbE)
+
+[Valkyrie: NASA's Superhero Robot](https://www.youtube.com/watch?v=IE-YBaYjbqY)
+
 
 ---
 
