@@ -2,7 +2,7 @@
 
 ## Week 1: Assembly & Orientation
 
-* **Day 1:** Build the chassis. Identify each part (Arduino UNO = brain, L298N = muscles, servo = neck, ultrasonic = eyes).
+* **Day 1:** Build the chassis. Identify each part and what it does.
 * **Day 2:** Power test. Upload a “blink” to confirm wiring works.
 
 ---
