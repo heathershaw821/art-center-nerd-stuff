@@ -5,7 +5,7 @@
 ## Week 1: Assembly & Orientation
 
 * **Day 1:** Build the chassis. Identify each part and what it does.
-* **Day 2:** Power test. Upload a “blink” to confirm wiring works.
+* **Day 2:** Finish building. Power test. Upload a “blink” to confirm wiring works.
 
 
 
@@ -13,7 +13,7 @@
 
 ## Week 2: Arduino Fundamentals
 
-- **Day 1 (Code):** Serial basics: `Serial.print()`, Hello World, debugging. Digital output with LED blink patterns.
+- **Day 1 (Code):** Intro to C. Serial basics: `Serial.print()`, Hello World, debugging. Digital output with LED blink patterns.
 - **Day 2 (Robot):** Video presentation + lecture on robotics funamentals
 
   - [An Introduction To Robotics 🤖 By Teach Kids Robotics](https://www.youtube.com/watch?v=HvMQONnCXbE)
