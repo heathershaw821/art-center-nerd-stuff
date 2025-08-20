@@ -25,6 +25,7 @@
 ## Week 3: Motors & Basic Motion
 
 - **Day 1 (Code):** HIGH/LOW digital writes, `delay()`, sequencing. Build motor control functions: `forward()`, `backward()`, `stop()`.
+  - [Controlling Self Driving Cars](https://youtu.be/4Y7zG48uHRo)
 - **Day 2 (Robot):** Make the robot drive forward, reverse, turn left/right using those functions.
 
 ---
