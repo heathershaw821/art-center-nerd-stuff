@@ -96,3 +96,8 @@ To keep it **rewarding**:
 - Every session ends with something **moving or visual** (LED blink, wheel spin, sensor print, robot turning).
 - Students **see the robot get smarter** each week: from blinking → moving → controlled → sensing → thinking.
 
+---
+
+# Resources
+
+[https://docs.arduino.cc/](https://docs.arduino.cc/)
