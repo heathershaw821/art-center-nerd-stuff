@@ -4,7 +4,7 @@
 Servo myservo;  // create servo object to control a servo
 // twelve servo objects can be created on most boards
 
-int head_pos = 0;    // variable to store the servo position
+int head_pos = 90;    // variable to store the servo position
 
 void turn_head(int address, int speed) { // address 0 - 180
   if (address > head_pos) {
@@ -29,7 +29,7 @@ void setup() {
 
   myservo.attach(A2);  // attaches the servo on pin 9 to the servo object
 
-  turn_head((180/2)+1, 15);
+  turn_head(90, 15);
 }
 
 
