@@ -29,10 +29,15 @@ void setup() {
 
   myservo.attach(A2);  // attaches the servo on pin 9 to the servo object
 
-  turn_head(180/2, 15);
+  turn_head((180/2)+1, 15);
 }
 
 
 void loop() {
-  
+  String cmd = Serial.readString();
+  cmd.trim();
+  if (cmd.length() > 0) {
+    head_pos = cmd.toInt();
+    turn_head(head_pos, 15);
+  }
 }
