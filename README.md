@@ -49,9 +49,9 @@
 
 ## Week 6: Obstacle Avoidance and world mapping
 
-- **Day 1 (Code):** What is obstacle avoidance and world mapping?
+- **Day 1:** What is obstacle avoidance and world mapping?
   - 
-- **Day 2 (Robot):** Robot avoids collisions: if wall < 20cm, stop and turn. Teach **autonomy = decision-making**.
+- **Day 2:** Robot avoids collisions: if wall < 20cm, stop and turn. Teach **autonomy = decision-making**.
 
 # Capstone Project Week (Optional Week 9 if time allows)
 
