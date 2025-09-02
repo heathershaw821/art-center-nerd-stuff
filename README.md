@@ -24,25 +24,33 @@
 
 ## Week 3: Head Games
 
-- **Day 1 (Code):** HIGH/LOW digital writes, `delay()`, sequencing. Build motor control functions: `forward()`, `backward()`, `stop()`.
+- **Day 1:** How servo motors work
   - [Controlling Self Driving Cars](https://youtu.be/4Y7zG48uHRo)
-- **Day 2 (Robot):** Make the robot drive forward, reverse, turn left/right using those functions.
+- **Day 2:** Ultrasonic sensors
   - [Ultrasonic Sensor Module](https://youtu.be/KGwtit2bFyo)
 
 ---
 
 ## Week 4: Motors & Remote Control
 
-- **Day 1 (Code):** Read IR remote signals using a library. Print codes to Serial Monitor. Learn about Motor drivers.
+- **Day 1:** Read IR remote signals using a library. Print codes to Serial Monitor. Learn about Motor drivers.
   - [How DC GEAR MOTOR Works with ARDUINO and L298N](https://youtu.be/GPVC84D5ULw)
   - [IR Remote with Arduino Uno](https://youtu.be/q97VE3oEwIc)
-- **Day 2 (Robot):** Remote control mode: UP = forward, DOWN = backward, LEFT = spin left, RIGHT = spin right. (Reward = they can drive their robot like an RC car).
+- **Day 2:** Remote control mode: UP = forward, DOWN = backward, LEFT = spin left, RIGHT = spin right. (Reward = they can drive their robot like an RC car).
 
 ---
 
-## Week 5: Conditionals & Obstacle Avoidance
+## Week 5: Raspberry Pi & the separation for decision making from control modules
 
-- **Day 1 (Code):** Nested `if/else`. Practice with LED logic (red/green/yellow = stop/go/warning).
+- **Day 1:** Getting comfortable with what raspberry pi is, and setting up our control interfaces
+- **Day 2:** decision making vs control modules
+
+---
+
+## Week 6: Obstacle Avoidance and world mapping
+
+- **Day 1 (Code):** What is obstacle avoidance and world mapping?
+  - 
 - **Day 2 (Robot):** Robot avoids collisions: if wall < 20cm, stop and turn. Teach **autonomy = decision-making**.
 
 # Capstone Project Week (Optional Week 9 if time allows)
