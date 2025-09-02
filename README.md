@@ -13,8 +13,9 @@
 
 ## Week 2: Arduino Fundamentals
 
-- **Day 1 (Code):** Intro to C. Serial basics: `Serial.print()`, Hello World, debugging. Digital output with LED blink patterns.
-- **Day 2 (Robot):** Video presentation + lecture on robotics funamentals
+- **Day 1:** Intro to C. Serial basics: `Serial.print()`, Hello World, debugging. Digital output with LED blink patterns.
+  - [What is Serial.begin(9600)?](https://www.youtube.com/watch?v=8GX5brSZ_1E)
+- **Day 2:** Video presentation + lecture on robotics funamentals
 
   - [An Introduction To Robotics 🤖 By Teach Kids Robotics](https://www.youtube.com/watch?v=HvMQONnCXbE)
   - [Valkyrie: NASA's Superhero Robot](https://www.youtube.com/watch?v=IE-YBaYjbqY)
