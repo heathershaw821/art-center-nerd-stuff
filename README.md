@@ -1,4 +1,4 @@
-# 8-Week Robotics Curriculum (16 Sessions)
+# Robotics Curriculum
 
 ![Robot car built](images/robot.jpeg)
 
