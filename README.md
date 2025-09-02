@@ -22,50 +22,26 @@
 
 ---
 
-## Week 3: Motors & Basic Motion
+## Week 3: Head Games
 
 - **Day 1 (Code):** HIGH/LOW digital writes, `delay()`, sequencing. Build motor control functions: `forward()`, `backward()`, `stop()`.
   - [Controlling Self Driving Cars](https://youtu.be/4Y7zG48uHRo)
 - **Day 2 (Robot):** Make the robot drive forward, reverse, turn left/right using those functions.
+  - [Ultrasonic Sensor Module](https://youtu.be/ZqQgxgnH9wg)
 
 ---
 
-## Week 4: Loops & Motion Patterns
-
-- **Day 1 (Code):** `for` loops, `while` loops, `millis()` timing instead of delay. Practice LED sequences with loops.
-- **Day 2 (Robot):** Write a robot “dance routine” — forward 2s, spin, reverse, pause. Use loops for repetition.
-
----
-
-## Week 5: Inputs & Remote Control
+## Week 4: Inputs & Remote Control
 
 - **Day 1 (Code):** Read IR remote signals using a library. Print codes to Serial Monitor. Introduce `if` statements.
 - **Day 2 (Robot):** Remote control mode: UP = forward, DOWN = backward, LEFT = spin left, RIGHT = spin right. (Reward = they can drive their robot like an RC car).
 
 ---
 
-## Week 6: Ultrasonic Distance Sensor
-
-- **Day 1 (Code):** Variables & functions. Use ultrasonic sensor on breadboard first. Print distances to Serial.
-- **Day 2 (Robot):** Robot drives forward until an obstacle < 20cm, then stops. Add LED warning when too close.
-
----
-
-## Week 7: Conditionals & Obstacle Avoidance
+## Week 5: Conditionals & Obstacle Avoidance
 
 - **Day 1 (Code):** Nested `if/else`. Practice with LED logic (red/green/yellow = stop/go/warning).
 - **Day 2 (Robot):** Robot avoids collisions: if wall < 20cm, stop and turn. Teach **autonomy = decision-making**.
-
----
-
-## Week 8: Servo & Scanning Radar
-
-- **Day 1 (Code):** Servo basics. Sweep servo 0–180° with `for` loop. Print angle values. Combine with ultrasonic sensor to log distances. (Mini radar scanner in Serial).
-- **Day 2 (Robot):** Full-featured robot: servo scans left, center, right → robot chooses best direction automatically.
-
-  - Example: if obstacle ahead, check left vs right → turn where there’s more space.
-
----
 
 # Capstone Project Week (Optional Week 9 if time allows)
 
