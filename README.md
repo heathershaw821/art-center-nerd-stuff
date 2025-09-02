@@ -87,4 +87,6 @@ To keep it **rewarding**:
 
 # Resources
 
-[https://docs.arduino.cc/](https://docs.arduino.cc/)
+[Arduino Documentation](https://docs.arduino.cc/)
+[RaspberryPi software](https://www.raspberrypi.com/software/)
+
