@@ -3,46 +3,41 @@ import pygame
 pygame.init()
 pygame.joystick.init()
 
-# Check for connected joysticks
 joystick_count = pygame.joystick.get_count()
-print(f"Number of joysticks detected: {joystick_count}")
-
 if joystick_count == 0:
-    print("No joysticks found. Please connect a joystick.")
+    print("No joysticks found.")
     exit(-1)
+else:
+    # Assuming the first detected joystick is the Xbox controller
+    joystick = pygame.joystick.Joystick(0)
+    joystick.init()
+    print(f"Controller connected: {joystick.get_name()}")
 
-# Get the first joystick
-joystick = pygame.joystick.Joystick(0)
-joystick.init()
-print(f"Joystick name: {joystick.get_name()}")
-print(f"Number of axes: {joystick.get_numaxes()}")
-print(f"Number of buttons: {joystick.get_numbuttons()}")
-print(f"Number of hats: {joystick.get_numhats()}")
-
-# Set up the display (optional, for visual feedback)
-screen = pygame.display.set_mode((600, 400))
-pygame.display.set_caption("Pygame Joystick Test")
 
 running = True
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-        elif event.type == pygame.JOYAXISMOTION:
-            # Handle axis motion (e.g., analog sticks)
-            print(f"Axis {event.axis} moved to {event.value:.2f}")
         elif event.type == pygame.JOYBUTTONDOWN:
-            # Handle button presses
-            print(f"Button {event.button} pressed")
-        elif event.type == pygame.JOYBUTTONUP:
-            # Handle button releases
-            print(f"Button {event.button} released")
+            print(f"Button {event.button} pressed.")
+            # Map button numbers to Xbox button names (e.g., A=0, B=1, X=2, Y=3)
+        elif event.type == pygame.JOYAXISMOTION:
+            # Axis values range from -1.0 to 1.0
+            # Left stick X: event.axis == 0
+            # Left stick Y: event.axis == 1
+            # Right stick X: event.axis == 4
+            # Right stick Y: event.axis == 3
+            # Triggers (combined): event.axis == 2 (RT positive, LT negative)
+            print(f"Axis {event.axis} moved to {event.value:.2f}")
+            # Implement deadzone for analog sticks to prevent drift
+            if abs(event.value) < 0.05: # Example deadzone
+                pass
         elif event.type == pygame.JOYHATMOTION:
-            # Handle hat (D-pad) movement
+            # D-pad: event.value is a tuple (x, y) with -1, 0, or 1
             print(f"Hat {event.hat} moved to {event.value}")
 
-    # Basic screen update (optional)
-    screen.fill((0, 0, 0)) # Black background
-    pygame.display.flip()
-
-pygame.quit()
+    # You can also poll the joystick state directly outside the event loop
+    # For example, to get current left stick position:
+    # left_stick_x = joystick.get_axis(0)
+    # left_stick_y = joystick.get_axis(1)
