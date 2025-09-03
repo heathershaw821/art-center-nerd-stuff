@@ -55,7 +55,7 @@
 - **Day 1:** What is obstacle avoidance and world mapping?
 - **Day 2:** Robot avoids collisions: if wall < 20cm, stop and turn. Teach **autonomy = decision-making**.
 
-# Capstone Project Week (Optional Week 9 if time allows)
+# Capstone Project Week (Optional if time allows)
 
 - Teams design **autonomous robot demos**:
   - Maze-solving.
