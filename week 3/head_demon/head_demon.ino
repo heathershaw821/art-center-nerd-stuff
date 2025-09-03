@@ -52,7 +52,7 @@ float checkdistance() {
 
 void setup() {
   // Initialize serial communication at 9600 baud rate
-  Serial.begin(9600);
+  Serial.begin(115200);
 
   myservo.attach(A2);         // attaches the servo on pin 9 to the servo object
   turn_head(head_pos, head_speed);    // center the head
@@ -63,14 +63,15 @@ void setup() {
 
 
 void loop() {
-  String cmd = Serial.readString();   // read in head position from serial
-  cmd.trim();                         // trim new lines, or extra crap at the end
+  if (Serial.available() > 0) {
+    String cmd = Serial.readString();   // read in head position from serial
+    cmd.trim();                         // trim new lines, or extra crap at the end
 
-  if (cmd.length() > 0) {     // if there is input
-    head_pos = cmd.toInt();   // convert it to a number
-    turn_head(head_pos, head_speed);  // and turn the head
+    if (cmd.length() > 0) {     // if there is input
+      head_pos = cmd.toInt();   // convert it to a number
+      turn_head(head_pos, head_speed);  // and turn the head
+    }
   }
-
   // get the distance from sensor and print it out
   object_distance = checkdistance();
   Serial.print("Distance:");
