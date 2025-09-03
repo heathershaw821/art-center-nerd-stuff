@@ -9,7 +9,7 @@ Servo myservo;  // create servo object to control the servo
 int head_pos = 91;
 int head_speed = 15;
 
-void turn_head(int address, int speed) {  // address 0 - 180
+void Head_Turn(int address, int speed) {  // address 0 - 180
   if (address > head_pos) {
     // look right
     for (int pos = head_pos; pos <= address; pos += 1) { // goes from 0 degrees to 180 degrees
@@ -33,9 +33,14 @@ void Head_Handler(void) {
 
     if (cmd.length() > 0) {     // if there is input
       head_pos = cmd.toInt();   // convert it to a number
-      turn_head(head_pos, head_speed);  // and turn the head
+      Head_Turn(head_pos, head_speed);  // and turn the head
     }
   }
+}
+
+void Head_Setup(void) {
+  myservo.attach(A2);         // attaches the servo on pin 9 to the servo object
+  Head_Turn(head_pos, head_speed);    // center the head
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -65,6 +70,12 @@ void UltraSonic_Handler(void) {
   Serial.print(object_distance);
   Serial.println("CM");
 }
+
+void UltraSonic_Setup(void) {
+  pinMode(TRIG_PIN, OUTPUT);  // set trigger pin to output
+  pinMode(ECHO_PIN, INPUT);   // set echo pin to input
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// IR Control
@@ -111,25 +122,25 @@ void IRremote_Handler(void) {
   }
 }
 
+void IRremote_Setup(void) {
+  IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK); // Start the receiver
+}
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// MAIN PROGRAM
 
 void setup(void) {
   // Initialize serial communication at 9600 baud rate
   Serial.begin(115200);
-
-  myservo.attach(A2);         // attaches the servo on pin 9 to the servo object
-  turn_head(head_pos, head_speed);    // center the head
-
-  pinMode(TRIG_PIN, OUTPUT);  // set trigger pin to output
-  pinMode(ECHO_PIN, INPUT);   // set echo pin to input
-
-  IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK); // Start the receiver
+  //Head_Setup();
+  //UltraSonic_Setup();
+  IRremote_Setup();
 }
 
 
 void loop(void) {
-  IRremote_Handler();
   //Head_Handler();
   //UltraSonic_Handler();
+  IRremote_Handler();
 }

@@ -26,6 +26,23 @@ void turn_head(int address, int speed) {  // address 0 - 180
   }
 }
 
+void Head_Handler(void) {
+  if (Serial.available() > 0) {
+    String cmd = Serial.readString();   // read in head position from serial
+    cmd.trim();                         // trim new lines, or extra crap at the end
+
+    if (cmd.length() > 0) {     // if there is input
+      head_pos = cmd.toInt();   // convert it to a number
+      turn_head(head_pos, head_speed);  // and turn the head
+    }
+  }
+}
+
+void Head_Setup(void) {
+  myservo.attach(A2);         // attaches the servo on pin 9 to the servo object
+  turn_head(head_pos, head_speed);    // center the head
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// ULTRA SONIC SENSOR
 
@@ -33,7 +50,7 @@ void turn_head(int address, int speed) {  // address 0 - 180
 #define ECHO_PIN A0
 int object_distance=0;
 
-float checkdistance() {
+float checkdistance(void) {
   digitalWrite(TRIG_PIN, LOW);  // reset the trigger pin
   delayMicroseconds(2);
   digitalWrite(TRIG_PIN, HIGH); // send a pulse for 10 microseconds
@@ -46,35 +63,32 @@ float checkdistance() {
   return distance;
 }
 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-/// MAIN PROGRAM
-
-void setup() {
-  // Initialize serial communication at 9600 baud rate
-  Serial.begin(115200);
-
-  myservo.attach(A2);         // attaches the servo on pin 9 to the servo object
-  turn_head(head_pos, head_speed);    // center the head
-
-  pinMode(TRIG_PIN, OUTPUT);  // set trigger pin to output
-  pinMode(ECHO_PIN, INPUT);   // set echo pin to input
-}
-
-
-void loop() {
-  if (Serial.available() > 0) {
-    String cmd = Serial.readString();   // read in head position from serial
-    cmd.trim();                         // trim new lines, or extra crap at the end
-
-    if (cmd.length() > 0) {     // if there is input
-      head_pos = cmd.toInt();   // convert it to a number
-      turn_head(head_pos, head_speed);  // and turn the head
-    }
-  }
+void UltraSonic_Handler(void) {
   // get the distance from sensor and print it out
   object_distance = checkdistance();
   Serial.print("Distance:");
   Serial.print(object_distance);
   Serial.println("CM");
+}
+
+void UltraSonic_Setup(void) {
+  pinMode(TRIG_PIN, OUTPUT);  // set trigger pin to output
+  pinMode(ECHO_PIN, INPUT);   // set echo pin to input
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// MAIN PROGRAM
+
+void setup(void) {
+  // Initialize serial communication at 9600 baud rate
+  Serial.begin(115200);
+  Head_Setup();
+  UltraSonic_Setup();
+}
+
+
+void loop(void) {
+  Head_Handler();
+  UltraSonic_Handler();
 }
