@@ -44,6 +44,7 @@
 ## Week 5: Raspberry Pi & the separation of decision making from control modules
 
 - **Day 1:** Getting comfortable with what raspberry pi is, and setting up our control interfaces
+  - [How to pair bluetook to RaspberryPi](https://www.youtube.com/watch?v=lHwvoFLbAkM)
 - **Day 2:** decision making vs control modules
 
 ---
