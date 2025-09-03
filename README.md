@@ -38,6 +38,7 @@
   - [How DC GEAR MOTOR Works with ARDUINO and L298N](https://youtu.be/GPVC84D5ULw)
   - [IR Remote with Arduino Uno](https://youtu.be/q97VE3oEwIc)
 - **Day 2:** Remote control mode: UP = forward, DOWN = backward, LEFT = spin left, RIGHT = spin right. (Reward = they can drive their robot like an RC car).
+  - [How to Make Anything - Learn to Think Like an Engineer](https://www.youtube.com/watch?v=IIwTCyu2wS4)
 
 ---
 
