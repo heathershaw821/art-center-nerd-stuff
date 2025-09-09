@@ -38,8 +38,9 @@
 
 ### Week 5: Raspberry Pi & the separation of decision making from control modules
 
-- **Day 1:** Getting comfortable with what the Raspberry Pi is, and setting up our control interfaces
+- **Day 1:** Getting comfortable with what the Raspberry Pi / Linux are, and setting up our control interfaces
   - [Linux Command Line for Beginners](https://youtu.be/16d2lHc0Pe8)
+  - [Online Linux Terminal and Playground](https://labex.io/tutorials/linux-online-linux-playground-372915)
 - **Day 2:** Introduction to Python: Let's write a program!
 
 ---
