@@ -63,12 +63,7 @@
 
 By the end, each student can:
 
-- Assemble and wire a robot from scratch.
-- Use **Arduino libraries** (Servo, IRremote, etc.).
-- Write modular functions (`forward()`, `scanLeft()`, etc.).
-- Implement **sensor-based autonomy** with ultrasonic + servo scanning.
-- Debug and troubleshoot using Serial Monitor.
-- Create a final project that’s personal and rewarding.
+- 
 
 ---
 
