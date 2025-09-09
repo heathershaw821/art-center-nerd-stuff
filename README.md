@@ -48,7 +48,7 @@
 
 ---
 
-# Capstone Project Week (Optional if time allows)
+# Capstone Project
 
 - Teams design **autonomous robot demos**:
   - Maze-solving.
