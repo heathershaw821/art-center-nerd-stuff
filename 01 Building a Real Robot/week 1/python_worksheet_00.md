@@ -31,6 +31,8 @@ it’s a function if it has the right methods. This allows you to define functio
 arguments, making your code much more flexible and reusable. Functions are essential for breaking down complex problems 
 into manageable steps, promoting modularity and making your programs easier to understand and maintain.
 
+
+
 ### Example
 
 *   A *function* called `greet` that takes one argument (the person's name) and prints a greeting message.
