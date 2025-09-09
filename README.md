@@ -2,37 +2,31 @@
 
 ![Robot car built](images/robot.jpeg)
 
-## Week 1: Assembly & Orientation
+## Robotics Fundamentals
+
+### Week 1: Assembly & Orientation
 
 * **Day 1:** Build the chassis. Identify each part and what it does.
 * **Day 2:** Finish building. Power test. Upload a “blink” to confirm wiring works.
 
+### Week 2: Arduino and Robotics Concepts Overview
 
-
----
-
-## Week 2: Arduino Fundamentals
-
-- **Day 1:** Intro to C. Serial basics: `Serial.print()`, Hello World, debugging. Digital output with LED blink patterns.
+- **Day 1:** Intro to what Arduino is, serial basics: `Serial.print()`, Hello World, debugging.
+  - [What is Arduino and can I use it for my project?](https://www.youtube.com/watch?v=CSx6k-zXlLE)
   - [What is Serial.begin(9600)?](https://www.youtube.com/watch?v=8GX5brSZ_1E)
-- **Day 2:** Video presentation + lecture on robotics funamentals
-
+- **Day 2:** Video presentation + lecture on robotics funamental concepts
   - [An Introduction To Robotics 🤖 By Teach Kids Robotics](https://www.youtube.com/watch?v=HvMQONnCXbE)
   - [Valkyrie: NASA's Superhero Robot](https://www.youtube.com/watch?v=IE-YBaYjbqY)
 
 
----
-
-## Week 3: Head Games
+### Week 3: Sensors and Servos
 
 - **Day 1:** How servo motors work
   - [Controlling Self Driving Cars](https://youtu.be/4Y7zG48uHRo)
 - **Day 2:** Ultrasonic sensors
   - [Ultrasonic Sensor Module](https://youtu.be/KGwtit2bFyo)
 
----
-
-## Week 4: Motors & Remote Control
+### Week 4: Motors, Remote Control, and the bridge between controlled and semi-autonomous machines
 
 - **Day 1:** Read IR remote signals using a library. Print codes to Serial Monitor. Learn about Motor drivers.
   - [How DC GEAR MOTOR Works with ARDUINO and L298N](https://youtu.be/GPVC84D5ULw)
@@ -40,21 +34,17 @@
 - **Day 2:** Remote control mode: UP = forward, DOWN = backward, LEFT = spin left, RIGHT = spin right. (Reward = they can drive their robot like an RC car).
   - [How to Make Anything - Learn to Think Like an Engineer](https://www.youtube.com/watch?v=IIwTCyu2wS4)
 
----
+##  Building a *real* robot by adding Raspberry Pi and Learning Python
 
-## Week 5: Raspberry Pi & the separation of decision making from control modules
+### Week 5: Raspberry Pi & the separation of decision making from control modules
 
-- **Day 1:** Getting comfortable with what raspberry pi is, and setting up our control interfaces
+- **Day 1:** Getting comfortable with what the Raspberry Pi is, and setting up our control interfaces
   - [Linux Command Line for Beginners](https://youtu.be/16d2lHc0Pe8)
-  - [How to pair Bluetooth to RaspberryPi](https://www.youtube.com/watch?v=lHwvoFLbAkM)
-- **Day 2:** decision making vs control modules
+- **Day 2:** Introduction to Python: Let's write a program!
+
+# UNDER CONSTRUCTION, MORE TO COME AS OUT TEST GROUP IS OVER
 
 ---
-
-## Week 6: Obstacle Avoidance and world mapping
-
-- **Day 1:** What is obstacle avoidance and world mapping?
-- **Day 2:** Robot avoids collisions: if wall < 20cm, stop and turn. Teach **autonomy = decision-making**.
 
 # Capstone Project Week (Optional if time allows)
 
