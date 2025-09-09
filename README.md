@@ -42,6 +42,8 @@
   - [Linux Command Line for Beginners](https://youtu.be/16d2lHc0Pe8)
 - **Day 2:** Introduction to Python: Let's write a program!
 
+---
+
 # UNDER CONSTRUCTION, MORE TO COME AS OUT TEST GROUP IS OVER
 
 ---
