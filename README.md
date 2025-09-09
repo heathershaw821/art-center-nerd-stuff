@@ -8,6 +8,7 @@
 
 * **Day 1:** Build the chassis. Identify each part and what it does.
 * **Day 2:** Finish building. Power test. Upload a “blink” to confirm wiring works.
+  - [Arduino IDE Software](https://www.arduino.cc/en/software/#ide)
 
 ### Week 2: Arduino and Robotics Concepts Overview
 
