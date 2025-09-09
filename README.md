@@ -66,8 +66,6 @@ By the end, each student can:
 
 - 
 
----
-
 To keep it **rewarding**:
 
 - Every session ends with something **moving or visual** (LED blink, wheel spin, sensor print, robot turning).
