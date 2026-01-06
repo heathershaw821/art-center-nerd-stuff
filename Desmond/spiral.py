@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# sudo apt install python3-termcolor python3-sympy
+
 import sys
 from termcolor import colored, cprint
 from sympy.ntheory.primetest import isprime
