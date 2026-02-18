@@ -44,7 +44,8 @@
   - [Linux Command Line for Beginners](https://youtu.be/16d2lHc0Pe8)
   - [Online Linux Terminal and Playground](https://labex.io/tutorials/linux-online-linux-playground-372915)
 - **Lesson 2:** Introduction to Python: Let's write a program!
-
+- **Lesson 3:** Boolean Algebra and formal logic
+    - [Boolean Algebra in 13 Minutes](https://youtu.be/cTjFy18SjRc)
 ---
 
 # UNDER CONSTRUCTION, MORE TO COME AS OUR TEST GROUP CONTINUES
