@@ -7,7 +7,7 @@ from time import sleep
 
 with serial.Serial() as ser:
   ser.baudrate = 115200
-  ser.port = 'COM1'
+  ser.port = 'Serial0'
   ser.open()
   sio = io.TextIOWrapper(io.BufferedRWPair(ser, ser))
   
