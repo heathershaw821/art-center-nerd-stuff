@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# https://pyserial.readthedocs.io/en/stable/shortintro.html
 
 import serial
 import io
@@ -7,7 +8,7 @@ from time import sleep
 
 with serial.Serial() as ser:
   ser.baudrate = 115200
-  ser.port = 'Serial0'
+  ser.port = '/dev/serial0'
   ser.open()
   sio = io.TextIOWrapper(io.BufferedRWPair(ser, ser))
   
