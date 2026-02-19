@@ -1,9 +1,22 @@
+#!/usr/bin/env python3
+
 import serial
 import io
-ser = serial.serial_for_url('loop://', timeout=1)
-sio = io.TextIOWrapper(io.BufferedRWPair(ser, ser))
+from time import sleep
 
-sio.write("hello\n")
-sio.flush() # it is buffering. required to get the data out *now*
-hello = sio.readline()
-print(hello == "hello\n")
+
+with serial.Serial() as ser:
+  ser.baudrate = 115200
+  ser.port = 'COM1'
+  ser.open()
+  sio = io.TextIOWrapper(io.BufferedRWPair(ser, ser))
+  
+  ser.write(b'180')
+  sleep(3)
+  ser.write(b'90')
+  sio.flush() # it is buffering. required to get the data out *now*
+  hello = sio.readline()
+  print(hello)
+
+
+
