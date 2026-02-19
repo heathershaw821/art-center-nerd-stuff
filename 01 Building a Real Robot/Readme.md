@@ -1,2 +1,2 @@
-!(desc 1)[ascii1.png]
-!(desc 1)[ascii2.png]
+!(ascii)[./ascii1.png "ascii"]
+!(extended ascii)[./ascii2.png "extended ascii"]
