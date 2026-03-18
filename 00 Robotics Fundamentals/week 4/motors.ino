@@ -200,9 +200,12 @@ void UltraSonic_Handler(void) {
   object_distance = checkdistance();
   
   if (object_distance != 0) {
-    Serial.print("Distance:");
-    Serial.print(object_distance);
-    Serial.println("CM");
+    // example: -> "distance 12"
+    // in python: -> input = "distance 12".split(" ") -> ["distance", "12"]
+    //  ^^^ list of strings inside input variable
+    //         convert "12" to an integer 12: -> int(input[1])
+    Serial.print("distance ");
+    Serial.print(object_distance); // in centimeters
 
     if (object_distance <= 5) {
       Motor_Backward(200);
