@@ -27,6 +27,8 @@ void Head_Turn(int address, int speed) {  // address 0 - 180
 }
 
 void Head_Handler(void) {
+  // input = " ".join(input) -> ["head", "90", "15"]
+  
   if (Serial.available() > 0) {
     String cmd = Serial.readString();   // read in head position from serial
     cmd.trim();                         // trim new lines, or extra crap at the end
