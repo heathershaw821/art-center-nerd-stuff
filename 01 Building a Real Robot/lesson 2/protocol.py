@@ -27,6 +27,16 @@ class Serial(Protocol):
 		# for every protocol application, you will change these to fit
 		self.SOL = ""
 		self.EOL = "\n"
+		actions["head"] = head_function
+		actions["distance"] = distance_function
+		actions["blink"] = blink_function
+
+	def head_function(self):
+		pass
+	def distance_function(self):
+		pass
+	def blink_function(self):
+		pass
 		
 if __name__ == "__main__":
 	print("This is a library.... Do better.")
