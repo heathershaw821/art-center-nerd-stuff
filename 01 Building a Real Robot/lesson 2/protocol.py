@@ -21,6 +21,8 @@ class Protocol:
 
 		SOL = ""   # start of action "string" (not always a literal "string")
 		EOL = "\n" # End of action "string"
+		self.send = None
+		self.receive = None
 
 class Serial(Protocol):
 	def __init__(self):
@@ -31,6 +33,10 @@ class Serial(Protocol):
 		actions["distance"] = distance_function
 		actions["blink"] = blink_function
 
+	def send(self):
+		pass
+	def receive(self):
+		pass
 	def head_function(self):
 		pass
 	def distance_function(self):
