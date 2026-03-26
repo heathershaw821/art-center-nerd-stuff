@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import pickle
 import serial
 import io
 from time import sleep
@@ -43,6 +44,12 @@ class Serial(Protocol):
 		pass
 	def blink_function(self):
 		pass
+	def save_state(self):
+		with open("./Serial.pickle" "wb") as f:
+			pickle.dump(self, f, pickle.HIGHEST_PROTOCOL)
+	def load_state(self):
+		with open("./Serial.pickle" "wb") as f:
+			self = pickle.load(f)
 		
 if __name__ == "__main__":
 	print("This is a library.... Do better.")
