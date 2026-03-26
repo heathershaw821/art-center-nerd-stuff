@@ -30,9 +30,9 @@ class Serial(Protocol):
 		# for every protocol application, you will change these to fit
 		self.SOL = ""
 		self.EOL = "\n"
-		actions["head"] = head_function
-		actions["distance"] = distance_function
-		actions["blink"] = blink_function
+		actions["head"] = self.head_function
+		actions["distance"] = self.distance_function
+		actions["blink"] = self.blink_function
 
 	def send(self):
 		pass
