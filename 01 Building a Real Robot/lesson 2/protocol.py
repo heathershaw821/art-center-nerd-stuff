@@ -7,9 +7,9 @@ from time import sleep
 
 class Protocol:
 	def __init__(self):
-		actions =  {  # our "commands" (remember these are bidirectional on agreed terms)
+		actions =	{	# our "commands" (remember these are bidirectional on agreed terms)
 		# OUTPUTS (Actions)
-			"head": None,     # <<< right now
+			"head": None,		 # <<< right now
 			"forward": None,
 			"backward": None,
 			"left": None,
@@ -20,7 +20,7 @@ class Protocol:
 			# .........
 		}
 
-		SOL = ""   # start of action "string" (not always a literal "string")
+		SOL = ""	 # start of action "string" (not always a literal "string")
 		EOL = "\n" # End of action "string"
 		self.send = None
 		self.receive = None
@@ -38,16 +38,16 @@ class Serial(Protocol):
 		pass
 	def receive(self):
 		with serial.Serial() as ser:
-  			ser.baudrate = 115200
-  			ser.port = '/dev/serial0'
-  			ser.open()
-  			sio = io.TextIOWrapper(io.BufferedRWPair(ser, ser))
-  			# MUST be byte strings b'command arg1 arg2 ...'
-  			# NOT default Unicode strings, they are more than a byte in length
-  			#  SEE -> https://en.wikipedia.org/wiki/UTF-8#Implementations_and_adoption:~:text=Code%20point%20%E2%86%94-,UTF%2D8%20conversion,-First%20code%20point
-  			sio.flush() # it is buffering. required to get the data out *now*
-  			data = sio.readline()
-			return data
+			ser.baudrate = 115200
+			ser.port = '/dev/serial0'
+			ser.open()
+			sio = io.TextIOWrapper(io.BufferedRWPair(ser, ser))
+			# MUST be byte strings b'command arg1 arg2 ...'
+			# NOT default Unicode strings, they are more than a byte in length
+			#	SEE -> https://en.wikipedia.org/wiki/UTF-8#Implementations_and_adoption:~:text=Code%20point%20%E2%86%94-,UTF%2D8%20conversion,-First%20code%20point
+			sio.flush() # it is buffering. required to get the data out *now*
+			data = sio.readline()
+		return data
 	def head_function(self):
 		pass
 	def distance_function(self):
