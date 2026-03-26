@@ -62,8 +62,8 @@ class Serial(Protocol):
 		
 if __name__ == "__main__":
 	while True:
-		serial = Serial()
-		data = serial.receive()
+		arduino = Serial()
+		data = arduino.receive()
 		print(data)
 
 
