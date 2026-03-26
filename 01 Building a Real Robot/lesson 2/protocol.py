@@ -6,24 +6,23 @@ import io
 from time import sleep
 
 class Protocol:
-	def __init__(self):
-		self.actions =	{	# our "commands" (remember these are bidirectional on agreed terms)
+	actions =	{	# our "commands" (remember these are bidirectional on agreed terms)
 		# OUTPUTS (Actions)
-			"head": None,		 # <<< right now
-			"forward": None,
-			"backward": None,
-			"left": None,
-			"right": None,
-			"blink": None,
-			# INPUTS (Sensors)
-			"distance": None, # <<< right now
-			# .........
-		}
+		"head": None,		 # <<< right now
+		"forward": None,
+		"backward": None,
+		"left": None,
+		"right": None,
+		"blink": None,
+		# INPUTS (Sensors)
+		"distance": None, # <<< right now
+		# .........
+	}
 
-		self.SOL = ""	 # start of action "string" (not always a literal "string")
-		self.EOL = "\n" # End of action "string"
-		self.send = None
-		self.receive = None
+	SOL = ""	 # start of action "string" (not always a literal "string")
+	EOL = "\n" # End of action "string"
+	send = None
+	receive = None
 
 class Serial(Protocol):
 	def __init__(self):
