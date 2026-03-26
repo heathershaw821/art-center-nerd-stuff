@@ -48,7 +48,7 @@ class Serial(Protocol):
 		with open("./Serial.pickle" "wb") as f:
 			pickle.dump(self, f, pickle.HIGHEST_PROTOCOL)
 	def load_state(self):
-		with open("./Serial.pickle" "wb") as f:
+		with open("./Serial.pickle" "rb") as f:
 			self = pickle.load(f)
 		
 if __name__ == "__main__":
