@@ -44,8 +44,8 @@ class Serial(Protocol):
 			# MUST be byte strings b'command arg1 arg2 ...'
 			# NOT default Unicode strings, they are more than a byte in length
 			#	SEE -> https://en.wikipedia.org/wiki/UTF-8#Implementations_and_adoption:~:text=Code%20point%20%E2%86%94-,UTF%2D8%20conversion,-First%20code%20point
-			sio.flush() # it is buffering. required to get the data out *now*
 			data = sio.readline()
+			sio.flush() # it is buffering. required to get the data out *now*
 		return data
 	def head_function(self):
 		pass
