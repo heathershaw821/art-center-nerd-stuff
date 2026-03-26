@@ -34,6 +34,7 @@ class Serial(Protocol):
 		self.actions["blink"] = self.blink_function
 
 	def send(self):
+		# dont remember to flush
 		pass
 	def receive(self):
 		with serial.Serial() as ser:
@@ -45,7 +46,6 @@ class Serial(Protocol):
 			# NOT default Unicode strings, they are more than a byte in length
 			#	SEE -> https://en.wikipedia.org/wiki/UTF-8#Implementations_and_adoption:~:text=Code%20point%20%E2%86%94-,UTF%2D8%20conversion,-First%20code%20point
 			data = sio.readline()
-			sio.flush() # it is buffering. required to get the data out *now*
 		return data
 	def head_function(self):
 		pass
