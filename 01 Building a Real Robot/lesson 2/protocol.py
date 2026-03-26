@@ -7,7 +7,7 @@ from time import sleep
 
 class Protocol:
 	def __init__(self):
-		actions =	{	# our "commands" (remember these are bidirectional on agreed terms)
+		self.actions =	{	# our "commands" (remember these are bidirectional on agreed terms)
 		# OUTPUTS (Actions)
 			"head": None,		 # <<< right now
 			"forward": None,
@@ -20,8 +20,8 @@ class Protocol:
 			# .........
 		}
 
-		SOL = ""	 # start of action "string" (not always a literal "string")
-		EOL = "\n" # End of action "string"
+		self.SOL = ""	 # start of action "string" (not always a literal "string")
+		self.EOL = "\n" # End of action "string"
 		self.send = None
 		self.receive = None
 
@@ -30,9 +30,9 @@ class Serial(Protocol):
 		# for every protocol application, you will change these to fit
 		self.SOL = ""
 		self.EOL = "\n"
-		actions["head"] = self.head_function
-		actions["distance"] = self.distance_function
-		actions["blink"] = self.blink_function
+		self.actions["head"] = self.head_function
+		self.actions["distance"] = self.distance_function
+		self.actions["blink"] = self.blink_function
 
 	def send(self):
 		pass
