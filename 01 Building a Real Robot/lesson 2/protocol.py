@@ -28,7 +28,7 @@ class Serial(Protocol):
 	def __init__(self):
 		# for every protocol application, you will change these to fit
 		self.SOL = ""
-		self.EOL = "\n"
+		self.EOL = "\r\n"
 		self.actions["head"] = self.head_function
 		self.actions["distance"] = self.distance_function
 		self.actions["blink"] = self.blink_function
