@@ -78,7 +78,15 @@ To keep it **rewarding**:
 
 # Resources
 
+## Arduino
 - [Arduino Documentation](https://docs.arduino.cc/)
+
+## RaspberryPi
 - [RaspberryPi Software](https://www.raspberrypi.com/software/)
 - [RaspberryPi Documentation](https://www.raspberrypi.com/documentation/)
+
+## Python 3
 - [Python 3 Documentation](https://docs.python.org/3/library/)
+
+## Git stuff
+- [gitignore](https://git-scm.com/docs/gitignore)
