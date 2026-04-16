@@ -87,6 +87,7 @@ To keep it **rewarding**:
 
 ## Python 3
 - [Python 3 Documentation](https://docs.python.org/3/library/)
+- [Python Threading](https://docs.python.org/3/library/threading.html#:~:text=import%20threading%0A%3E%3E%3E-,thread%20%3D%20threading.Thread(target%3Df)%0A%3E%3E%3E%20thread.start(),-%3E%3E%3E%20thread.)
 
 ## Git stuff
 - [gitignore](https://git-scm.com/docs/gitignore)
