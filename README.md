@@ -88,6 +88,7 @@ To keep it **rewarding**:
 ## Python 3
 - [Python 3 Documentation](https://docs.python.org/3/library/)
 - [Python Threading](https://docs.python.org/3/library/threading.html#:~:text=import%20threading%0A%3E%3E%3E-,thread%20%3D%20threading.Thread(target%3Df)%0A%3E%3E%3E%20thread.start(),-%3E%3E%3E%20thread.)
+- [Python Queue](https://docs.python.org/3/library/queue.html#:~:text=threading%0Aimport%20queue-,q%20%3D%20queue.Queue(),-def%20worker()%3A)
 
 ## Git stuff
 - [gitignore](https://git-scm.com/docs/gitignore)
