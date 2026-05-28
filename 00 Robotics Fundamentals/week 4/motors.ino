@@ -248,6 +248,7 @@ void loop(void) {
       for(int i = 0; i < itemCount; i++){
         command[i] = splitter->getItemAtIndex(i);
       }
+      
       Head_Handler(command, itemCount);
       Motor_Handler(command, itemCount);
     }
