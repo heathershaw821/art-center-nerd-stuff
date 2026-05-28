@@ -4,6 +4,8 @@
 /// SERVO CONTROL
 
 #include <Servo.h>
+#include <StringSplitter.h>
+
 
 Servo myservo;  // create servo object to control the servo
 
@@ -27,18 +29,10 @@ void Head_Turn(int address, int speed) {  // address 0 - 180
   }
 }
 
-void Head_Handler(void) {
+void Head_Handler(String** cmd, unsigned int length) {
   // input = " ".join(input) -> ["head", "90", "15"]
-  
-  if (Serial.available() > 0) {
-    String cmd = Serial.readString();   // read in head position from serial
-    cmd.trim();                         // trim new lines, or extra crap at the end
-
-    if (cmd.length() > 0) {     // if there is input
-      head_pos = cmd.toInt();   // convert it to a number
-      Head_Turn(head_pos, head_speed);  // and turn the head
-    }
-  }
+  head_pos = cmd.toInt();   // convert it to a number
+  Head_Turn(head_pos, head_speed);  // and turn the head
 }
 
 void Head_Setup(void) {
@@ -240,7 +234,27 @@ void setup(void) {
 
 
 void loop(void) {
-  Head_Handler();
+  // Outputs
+  if (Serial.available() > 0) {
+    String Sbuffer = Serial.readString();   // read from serial
+    Sbuffer.trim();                         // trim new lines, or extra crap at the end
+
+    if (Sbuffer.length() > 0) {     // if there is input
+      // split the command string
+      StringSplitter *splitter = new StringSplitter(Sbuffer, ' ', 5);
+      int itemCount = splitter->getItemCount();
+      String command[5];
+
+      for(int i = 0; i < itemCount; i++){
+        command[i] = splitter->getItemAtIndex(i);
+      }
+      Head_Handler(command, itemCount);
+      Motor_Handler(command, itemCount);
+    }
+  }
+
+
+  // Sensors
   UltraSonic_Handler();
   IRremote_Handler();
 }
