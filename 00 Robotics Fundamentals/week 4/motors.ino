@@ -118,6 +118,29 @@ void Motor_Stop(void) {
   digitalWrite(LEFT_IN2_PIN, HIGH);
 }
 
+
+void Motor_Handler(String** cmd, unsigned int length)  {
+
+  //! <DIRECTION> <SPEED>
+  if (length != 2 && cmd[0] != "stop") return;
+
+  if (cmd[0] == "up") {
+    Motor_Forward(cmd[1].toInt());
+  } elif (cmd[0] == "down") {
+    Motor_Backward(cmd[1].toInt());
+  }
+  elif (cmd[0] == "left") {
+    Motor_Rotate_Left(cmd[1].toInt());
+  }
+  elif (cmd[0] == "right") {
+    Motor_Rotate_Right(cmd[1].toInt());
+  }
+  elif (cmd[0] == "stop") {
+    Motor_Stop();
+  }
+  
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// IR Control
 
