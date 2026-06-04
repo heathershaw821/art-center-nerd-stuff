@@ -29,9 +29,10 @@ void Head_Turn(int address, int speed) {  // address 0 - 180
   }
 }
 
-void Head_Handler(String** cmd, unsigned int length) {
+void Head_Handler(String* cmd[5], unsigned int length) {
   // input = " ".join(input) -> ["head", "90", "15"]
-  head_pos = cmd.toInt();   // convert it to a number
+  head_pos = cmd[1]->toInt();   // convert it to a number
+  head_speed = cmd[2]->toInt();   // convert it to a number
   Head_Turn(head_pos, head_speed);  // and turn the head
 }
 
@@ -119,23 +120,23 @@ void Motor_Stop(void) {
 }
 
 
-void Motor_Handler(String** cmd, unsigned int length)  {
+void Motor_Handler(String* cmd[5], unsigned int length)  {
 
   //! <DIRECTION> <SPEED>
   if (length != 2 && cmd[0] != "stop") return;
 
   if (cmd[0] == "up") {
-    Motor_Forward(cmd[1].toInt());
-  } elif (cmd[0] == "down") {
-    Motor_Backward(cmd[1].toInt());
+    Motor_Forward(cmd[1]->toInt());
+  } else if (cmd[0] == "down") {
+    Motor_Backward(cmd[1]->toInt());
   }
-  elif (cmd[0] == "left") {
-    Motor_Rotate_Left(cmd[1].toInt());
+  else if (cmd[0] == "left") {
+    Motor_Rotate_Left(cmd[1]->toInt());
   }
-  elif (cmd[0] == "right") {
-    Motor_Rotate_Right(cmd[1].toInt());
+  else if (cmd[0] == "right") {
+    Motor_Rotate_Right(cmd[1]->toInt());
   }
-  elif (cmd[0] == "stop") {
+  else if (cmd[0] == "stop") {
     Motor_Stop();
   }
   
@@ -266,10 +267,10 @@ void loop(void) {
       // split the command string
       StringSplitter *splitter = new StringSplitter(Sbuffer, ' ', 5);
       int itemCount = splitter->getItemCount();
-      String command[5];
+      String* command[5];
 
       for(int i = 0; i < itemCount; i++){
-        command[i] = splitter->getItemAtIndex(i);
+        *command[i] = splitter->getItemAtIndex(i);
       }
       
       Head_Handler(command, itemCount);
