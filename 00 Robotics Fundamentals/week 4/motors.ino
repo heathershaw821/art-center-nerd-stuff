@@ -31,9 +31,11 @@ void Head_Turn(int address, int speed) {  // address 0 - 180
 
 void Head_Handler(String* cmd[5], unsigned int length) {
   // input = " ".join(input) -> ["head", "90", "15"]
-  head_pos = cmd[1]->toInt();   // convert it to a number
-  head_speed = cmd[2]->toInt();   // convert it to a number
-  Head_Turn(head_pos, head_speed);  // and turn the head
+  if (cmd[0] == "head") {
+    head_pos = cmd[1]->toInt();   // convert it to a number
+    head_speed = cmd[2]->toInt();   // convert it to a number
+    Head_Turn(head_pos, head_speed);  // and turn the head
+  }
 }
 
 void Head_Setup(void) {
