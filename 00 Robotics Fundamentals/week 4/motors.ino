@@ -221,7 +221,10 @@ void UltraSonic_Handler(String cmd[], unsigned int length) {
   // get the distance from sensor
   int object_distance=0;
 
-  object_distance = checkdistance();
+  while (object_distance == 0) {
+    object_distance = checkdistance();
+  }
+
   if (length > 0 && cmd[0] == "distance") {
       // example: -> "distance 12"
       // in python: -> input = "distance 12".split(" ") -> ["distance", "12"]
@@ -231,11 +234,8 @@ void UltraSonic_Handler(String cmd[], unsigned int length) {
       Serial.print(object_distance); // in centimeters
       Serial.print("\r\n"); // in centimeters
   }
-
-  if (object_distance != 0) {
-    if (object_distance <= 5) {
-      Motor_Stop();
-    }
+  if (object_distance <= 5) {
+    Motor_Stop();
   }
 
 }
