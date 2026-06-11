@@ -218,12 +218,11 @@ float checkdistance(void) {
 }
 
 void UltraSonic_Handler(String cmd[], unsigned int length) {
+  // get the distance from sensor
+  int object_distance=0;
 
+  object_distance = checkdistance();
   if (length > 0 && cmd[0] == "distance") {
-  // get the distance from sensor and print it out
-    int object_distance=0;
-    object_distance = checkdistance();
-    
       // example: -> "distance 12"
       // in python: -> input = "distance 12".split(" ") -> ["distance", "12"]
       //  ^^^ list of strings inside input variable
