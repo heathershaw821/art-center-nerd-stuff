@@ -217,26 +217,28 @@ float checkdistance(void) {
   return distance;
 }
 
-void UltraSonic_Handler(void) {
-  // get the distance from sensor and print it out
-  int object_distance=0;
-  object_distance = checkdistance();
-  
-  if (object_distance != 0) {
-    // example: -> "distance 12"
-    // in python: -> input = "distance 12".split(" ") -> ["distance", "12"]
-    //  ^^^ list of strings inside input variable
-    //         convert "12" to an integer 12: -> int(input[1])
-    Serial.print("distance ");
-    Serial.print(object_distance); // in centimeters
-    Serial.print("\r\n"); // in centimeters
+void UltraSonic_Handler(String cmd[], unsigned int length) {
 
+  if (length > 0 && cmd[0] == "distance") {
+  // get the distance from sensor and print it out
+    int object_distance=0;
+    object_distance = checkdistance();
+    
+      // example: -> "distance 12"
+      // in python: -> input = "distance 12".split(" ") -> ["distance", "12"]
+      //  ^^^ list of strings inside input variable
+      //         convert "12" to an integer 12: -> int(input[1])
+      Serial.print("distance ");
+      Serial.print(object_distance); // in centimeters
+      Serial.print("\r\n"); // in centimeters
+  }
+
+  if (object_distance != 0) {
     if (object_distance <= 5) {
-      Motor_Backward(200);
-      delay(800);
       Motor_Stop();
     }
   }
+
 }
 
 void UltraSonic_Setup(void) {
@@ -280,6 +282,7 @@ void loop(void) {
       
       Head_Handler(command, itemCount);
       Motor_Handler(command, itemCount);
+      UltraSonic_Handler(command, itemCount);
 
       // Clean up dynamic memory allocated by StringSplitter to prevent memory leaks
       delete splitter; 
@@ -288,6 +291,5 @@ void loop(void) {
 
 
   // Sensors
-  UltraSonic_Handler();
   IRremote_Handler();
 }
